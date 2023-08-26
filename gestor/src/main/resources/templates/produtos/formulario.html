@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nx/thymeleaf/layout"
+      layout:decorate="~{template.html}">
+<head>
+    <title>Cadstro de Produto</title>
+</head>
+
+<body>
+<div layout:fragment="conteudo">
+    <h1>Cadastro de Produto</h1>
+    <form method="post" action="/produtos">
+        <div>
+            <label for="nome">Nome do Produto:</label>
+            <input id="nome" name="nome">
+        </div>
+        <div>
+            <label for="cor">Cor do Produto:</label>
+            <input id="cor" name="cor">
+        </div>
+        <div>
+            <label for="valor">Valor do Produto:</label>
+            <input id="valor" name="valor">
+        </div>
+        <input type="submit" value="Cadastrar">
+    </form>
+</div>
+</body>
+</html>

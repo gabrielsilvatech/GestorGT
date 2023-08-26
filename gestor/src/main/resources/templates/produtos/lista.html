@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nx/thymeleaf/layout"
+                layout:decorate="~{template.html}">
+<head>
+    <title>Lista de Produto</title>
+</head>
+<body>
+<div layout:fragment="conteudo">
+    <h1>Lista de Produto</h1>
+    <a href="/produtos/formulario">Novo</a>
+    <table>
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>COR</th>
+                <th>VALOR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="produto : ${lista}">
+                <td th:text="${produto.nome}"></td>
+                <td th:text="${produto.cor}"></td>
+                <td th:text="${produto.valor}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
