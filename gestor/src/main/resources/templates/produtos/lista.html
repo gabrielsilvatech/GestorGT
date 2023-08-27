@@ -15,6 +15,7 @@
                 <th>NOME</th>
                 <th>COR</th>
                 <th>VALOR</th>
+                <th>AÇÕES</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,14 @@
                 <td th:text="${produto.nome}"></td>
                 <td th:text="${produto.cor}"></td>
                 <td th:text="${produto.valor}"></td>
+                <td>
+                    <a th:href="@{/produtos/formulario?id={id}(id=${produto.id})}">Editar</a>
+                    <form action="/produtos" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                        <input type="hidden" name="id" th:value="${produto.id}">
+                        <input type="submit" value="Excluir">
+                    </form>
+                </td>
             </tr>
         </tbody>
     </table>

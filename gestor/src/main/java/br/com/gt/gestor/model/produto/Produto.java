@@ -48,4 +48,11 @@ public class Produto {
                 ", valor=" + valor +
                 '}';
     }
+
+    public void atualizaDados(DadosEditarProduto dados) {
+            this.nome = dados.nome();
+            this.cor = dados.cor();
+            this.valor = dados.valor();
+
+    }
 }
