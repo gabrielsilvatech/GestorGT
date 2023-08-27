@@ -6,12 +6,12 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "tblprodutos")
+@Table(name = "produtos")
 public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProduto;
+    private Long id;
     private String nome;
     private String cor;
     private BigDecimal valor;
@@ -22,8 +22,10 @@ public class Produto {
         this.valor = dados.valor();
     }
 
+    public Produto (){}
+
     public Long getId() {
-        return idProduto;
+        return id;
     }
 
     public String getNome() {
